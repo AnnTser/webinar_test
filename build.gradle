@@ -32,6 +32,7 @@ dependencies {
             "com.codeborne:selenide:6.16.0",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
+            'com.codeborne:pdf-test:1.5.0',
             "org.junit.jupiter:junit-jupiter:5.9.0",
             "org.slf4j:slf4j-simple:1.7.29")
 }
@@ -52,26 +53,17 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-
-task demoqa_test (type: Test) {
+task main_test(type: Test) {
     useJUnitPlatform {
-        includeTags("demoqa")
+        includeTags("MainPage")
+    }
+}
+task auth_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Auth")
     }
 }
 
-    task property_test (type: Test) {
-        useJUnitPlatform {
-            includeTags("property")
-        }
-    }
 
-    task hello_test (type: Test) {
-        useJUnitPlatform {
-            includeTags("hello")
-        }
-    }
-    task simple_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("simple")
-        }
-    }
+
+

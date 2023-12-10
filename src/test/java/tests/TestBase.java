@@ -16,7 +16,7 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://mts-link.ru/");
-        Configuration.browserVersion = System.getProperty("version","98");;
+        Configuration.browserVersion = System.getProperty("version","99");;
         Configuration.browser = System.getProperty("browser","chrome");
         Configuration.browserSize = System.getProperty("size", "1920X1280");
         Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");

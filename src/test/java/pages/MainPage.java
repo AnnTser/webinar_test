@@ -1,26 +1,32 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Assertions;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class MainPage {
 
     SelenideElement
-    titleLabel = $(".promo__title promo__title--name"),
+    titleLabel = $x("//*[@class='promo__title promo__title--name']"),
     ecosystemList = $(".ecosystem__list"),
     support = $(".header-top__list-item"),
-    createWebinarButton = $(".btn.block-with-numbers__btn._big btn--red a"),
-    ofertaLink = $(".footer__column-list-item"),
+    createWebinarButton = $(byText("Создать вебинар")),
+    ofertaLink = $(".footer__menu").$(byText("Оферта")),
+    downloadFile = $("a[href*='/legal/license-agreement.pdf']"),
     signButton = $(".header-bottom__btn");
 
 
     public MainPage openPage (String value) {
         open(value);
-        titleLabel.shouldHave(text("МТС Линк"));
+        titleLabel.shouldHave(text("МТС Линк "));
         return this;
     }
 
@@ -45,8 +51,15 @@ public class MainPage {
 
         return this;
     }
-    public MainPage checkOfertaFile (String value) {
-        ofertaLink.$(byText(value)).click();
+    public MainPage checkOfertaLink () {
+        ofertaLink.shouldHave(text("Оферта"));
+
+        return this;
+    }
+     public MainPage downloadOfertaLink (Boolean value) throws FileNotFoundException {
+        ofertaLink.shouldHave(text("Оферта"));
+        File file = downloadFile.download();
+        Assertions.assertTrue(file.exists());
 
         return this;
     }
