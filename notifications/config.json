@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "Webinar",
+    "environment": "PROD",
+    "comment": "any comment here",
+    "reportLink": "https://jenkins.autotests.cloud/job/C22-AnnCat23-demoqahw17/",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6972626894:AAGVKPre3CxHaLC7IG1j2UYDfslFDUctids",
+    "chat": "-1001977344381",
+    "replyTo": ""
+  }
+}
