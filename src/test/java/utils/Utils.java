@@ -13,7 +13,7 @@ public class Utils {
 
 
     public String setProduct() {
-        String[] arrayProduct = {"Встречи", "Вебинары ", "Курсы", "Чаты", "Доски", "Comdi"};
+        String[] arrayProduct = {"Встречи", "Вебинары", "Курсы", "Чаты", "Доски", "Comdi"};
 
         return faker.options().option(arrayProduct);
     }
