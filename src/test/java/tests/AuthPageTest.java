@@ -12,7 +12,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка открытия страницы авторизации и наличия надписи Вход")
-    public void checkTitle() {
+    public void checkTitleTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -20,7 +20,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия поля Почта")
-    public void checkEmail() {
+    public void checkEmailTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -31,7 +31,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия поля Пароль")
-    public void checkPassword() {
+    public void checkPasswordTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -42,7 +42,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия чекбокса Запомнить меня")
-    public void checkRemember() {
+    public void checkRememberTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -53,7 +53,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия кнопки Войти")
-    public void checkSubmit() {
+    public void checkSubmitTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -64,7 +64,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия кнопки Войти через SSO")
-    public void checkSSOButton() {
+    public void checkSSOButtonTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -75,7 +75,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия кнопки Восстановить пароль")
-    public void checkRecover() {
+    public void checkRecoverTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });
@@ -86,7 +86,7 @@ public class AuthPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия кнопки Создать аккаунт")
-    public void checkCreateAccount() {
+    public void checkCreateAccountTest() {
         step("Открыть страницу Авторизации", () -> {
             authPage.openAuthPage();
         });

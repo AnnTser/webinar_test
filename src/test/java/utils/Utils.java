@@ -8,8 +8,7 @@ public class Utils {
 
     public Faker faker = new Faker(new Locale("ru"));
 
-    public String productList = setProduct(),
-            userEmail = faker.internet().emailAddress();
+    public String productList = setProduct();
 
 
     public String setProduct() {

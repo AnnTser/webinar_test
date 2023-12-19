@@ -3,13 +3,14 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class AuthPage {
 
     SelenideElement
-            //   authLabel = $(".AuthContent_title__xRmXF"),
+            authLabel = $(".AuthContent_title__xRmXF"),
             userEmail = $("[data-testid = 'SignIn.field.email']"),
             userPassword = $("[data-testid = 'SignIn.field.password']"),
             checkBoxRememberMe = $("[data-testid = 'SignIn.field.remember-me']"),
@@ -21,7 +22,7 @@ public class AuthPage {
 
     public AuthPage openAuthPage() {
         open("https://events.webinar.ru/signin");
-//        authLabel.shouldHave(text("Вход"));
+        authLabel.shouldHave(text("Log in"));
         return this;
     }
 

@@ -15,7 +15,7 @@ public class MainPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия списка продуктов на главной странице")
-    public void checkProductList() {
+    public void checkProductListTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage(baseUrl);
         });
@@ -26,7 +26,7 @@ public class MainPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия кнопки Создать Вебинар на главной странице")
-    public void checkWebinarButton() {
+    public void checkWebinarButtonTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage(baseUrl);
         });
@@ -38,7 +38,7 @@ public class MainPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка кликабельности кнопки Войти на главной странице")
-    public void checkSignButton() {
+    public void checkSignButtonTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage(baseUrl);
         });
@@ -50,7 +50,7 @@ public class MainPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка скачиваемости Оферты на главной странице")
-    public void checkOferta() {
+    public void checkOfertaTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage(baseUrl);
         });
